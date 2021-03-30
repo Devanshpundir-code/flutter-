@@ -1,0 +1,37 @@
+import "package:flutter/material.dart";
+import 'dart:math';
+
+void main() {
+  runApp(MyFlutterApp());
+}
+
+class MyFlutterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "mY First app in flutter",
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("MY first app screen"),
+          ),
+          body: Material(
+            color: Colors.red,
+            child: Center(
+              child: Text(
+                "Your lucky number is ${generateLuckyNumber()}",
+                textDirection: TextDirection.ltr,
+                style: TextStyle(color: Colors.white, fontSize: 40.0),
+              ),
+            ),
+          )),
+    );
+  }
+
+  int generateLuckyNumber() {
+    var random = Random();
+    int luckyNumber = random.nextInt(10);
+
+    return luckyNumber;
+  }
+}
