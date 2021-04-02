@@ -1,0 +1,18 @@
+Widget getListView() {
+  var listView = ListView(children: <Widget>[
+    ListTile(
+      leading: Icon(Icons.laptop),
+      title: Text("New Laptop"),
+      subtitle: Text("8 gb ram new laptop"),
+      trailing: Icon(Icons.wb_sunny),
+    ),
+    ListTile(
+      leading: Icon(Icons.phone),
+      title: Text("New phone"),
+      subtitle: Text("8 gb ram new phone"),
+      trailing: Icon(Icons.wb_sunny),
+    ),
+  ]);
+
+  return listView;
+}
